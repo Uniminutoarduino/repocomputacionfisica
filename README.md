@@ -1,4 +1,4 @@
-# repocomputacionfisica
+# Repositorio Computación Física
 Repositorio del libro **Fundamentos de Computación Física y Programación Embebida Usando Dispositivos Móviles: Una Guía Práctica Para el Aula**. Este libro es una apuesta para la enseñanza de computación física usando enteramente dispositivos móviles. En este repositorio se encuentra lo siguiente:
 
 * Algoritmos de computación física para cada uno de los ejemplos del libro compatibles con la aplicación móvil EmDroid y su versión web.
