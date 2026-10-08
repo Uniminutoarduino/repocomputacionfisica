@@ -6,4 +6,4 @@ Repositorio del libro **Fundamentos de Computación Física y Programación Embe
 * Diseños 3D del capitulo 6 (Servos y robótica básica).
 * Diseños CAD en Eagle CadSoft de cada una de las tarjetas de desarrollo de EmDroid (rev A y rev B).
 
-Este proyecto ha sido posible gracias a la Fundación EiF (Engineering Information Foundation).
+Este proyecto ha sido posible gracias a la Fundación EiF (Engineering Information Foundation) https://eifgrants.org/ quien suministro los recursos (grant) para la investigación en educación en ingeniería que da soporte a este libro.
