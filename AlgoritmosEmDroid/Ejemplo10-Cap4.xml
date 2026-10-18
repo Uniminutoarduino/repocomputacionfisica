@@ -1,0 +1,117 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="delayms" id="i:WnKjn1m@#LvegQM-Gw" x="-350" y="90">
+    <value name="delay">
+      <block type="math_number" id="s.qsDYNcw^U.pM%fKv19">
+        <field name="NUM">50</field>
+      </block>
+    </value>
+    <next>
+      <block type="oled_iniciar" id="[,p:HjlJTKM;9fg1G5wy">
+        <next>
+          <block type="oled_reset" id="LuHv,~Y}+@{R88XUcFM#">
+            <next>
+              <block type="configurar_puerto" id="mM[GzBzxi*S4$;~1Y)IZ">
+                <field name="Port">B</field>
+                <value name="val">
+                  <block type="math_number" id="dgQ;hn1t!)Z#o(^5`D;$">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_whileUntil" id="71e*:5c$%:7dZ=TFUe[?">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_boolean" id="_8[S:r4wU-aqxAV|8M!r">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="controls_if" id="Gq|~#Mz{)k6Ekc@523!g">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="ckq#-;haekp^(SPzRqY+">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="leer_pin" id="I`ru~V+=iJ[st9!t!Als">
+                                <field name="Port">B</field>
+                                <value name="pin">
+                                  <block type="math_number" id="qk%Bh.fTz@~$b-`;h;1G">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="(qc8_tm9*=RRh^O_~C+?">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="oled_posicion" id="rmFGoBHhuI=Lx)ZKd#Ym">
+                            <value name="x">
+                              <block type="math_number" id="Xcqqj[jCWmeGN]6A02Jd">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <value name="y">
+                              <block type="math_number" id="uI-y+e%}*+R=2M@w7/Ca">
+                                <field name="NUM">51</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_enviartexto" id=".yl`@v56[sT)/Huol)mU">
+                                <value name="x">
+                                  <block type="text" id="W%/.58?GR3[f1o-:g(y/">
+                                    <field name="TEXT">Presionado.       </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="oled_posicion" id="=EtxBQq)NgUf)?,fIMP4">
+                            <value name="x">
+                              <block type="math_number" id="~p*JKvotv^;[acELz-S_">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <value name="y">
+                              <block type="math_number" id="R1Zr!dhb(Nq*%C,PZOYH">
+                                <field name="NUM">51</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_enviartexto" id="5U!UYuD.)q+L49d{BdgC">
+                                <value name="x">
+                                  <block type="text" id="l6ek;1vSrjBvrA2e~_7w">
+                                    <field name="TEXT">No Presionado   </field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="delayms" id="0[Zg;F}@p%NJ+|meE2~#">
+                            <value name="delay">
+                              <block type="math_number" id="l@?wt7xoR2#6j==Twbp2">
+                                <field name="NUM">50</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

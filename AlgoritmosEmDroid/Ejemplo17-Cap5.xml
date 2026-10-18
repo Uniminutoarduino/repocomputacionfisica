@@ -1,0 +1,171 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="hc.R**-?8=m-X(;spKd}">vectorusuario</variable>
+  </variables>
+  <block type="declarar_vector" id="I/S$5=Tru.DLpHe-5?m[" x="150" y="-10">
+    <field name="VAR" id="hc.R**-?8=m-X(;spKd}">vectorusuario</field>
+    <field name="Tipo">char</field>
+    <value name="Posiciones">
+      <block type="math_number" id="A6P-(`zv:kIfZ2.ZR1O/">
+        <field name="NUM">20</field>
+      </block>
+    </value>
+    <next>
+      <block type="usart_interr" id="wO~~@,-a%Z5,cEjXlw}_">
+        <value name="Vector">
+          <block type="variables_get" id="*+9+u#uOelyuu{*Gl/;p">
+            <field name="VAR" id="hc.R**-?8=m-X(;spKd}">vectorusuario</field>
+          </block>
+        </value>
+        <next>
+          <block type="configurar_puerto" id="8KR_H?]K0S/+HD3-T,Zu">
+            <field name="Port">B</field>
+            <value name="val">
+              <block type="math_number" id="]VKw)Rx0KoW*7PKm#c]w">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="delayms" id="/2G{U65teG-e6RnNS.tM">
+                <value name="delay">
+                  <block type="math_number" id="VIxI3*q%K!}2+,)Al]:8">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="usart_init" id="~=K%DLeV}4(%*]rt1ude">
+                    <next>
+                      <block type="lcdi2c_init" id="[Fl|WqDoy#ZDBZvlTCwY">
+                        <next>
+                          <block type="lcdi2c_clear" id="nvDwsoO9%%{)u?dhKlU`">
+                            <next>
+                              <block type="sei" id="qzvT!:%CeVtpfoQUn1Rj">
+                                <next>
+                                  <block type="controls_whileUntil" id="eip,zFI;C[E@AEuBi]6~">
+                                    <field name="MODE">WHILE</field>
+                                    <value name="BOOL">
+                                      <block type="logic_boolean" id="!4{iDKdAMqeG!briO1lW">
+                                        <field name="BOOL">TRUE</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="controls_if" id="-9%;OWpCr@PGn9X*oP6/">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id=";sFW[TyDi0ciV9be:G`X">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="obtener_valor_vector" id="b;)Q^@/U3B^)i-qOOqfl">
+                                                <field name="VAR" id="hc.R**-?8=m-X(;spKd}">vectorusuario</field>
+                                                <value name="Posiciones">
+                                                  <block type="math_number" id="_O1ocgP0|9Ia(#1u!,XF">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="text" id="0c1;0R-TCdE!joCg+8N`">
+                                                <field name="TEXT">a</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="lcdi2c_clear" id="/m1$J@-Z}m(z7hT:bzo#">
+                                            <next>
+                                              <block type="lcdi2c_escribirstring" id="EU+6U1woCizYHCjw!F^{">
+                                                <value name="Texto">
+                                                  <block type="text" id="#5YngL7VySkU+VXcO_F+">
+                                                    <field name="TEXT">Activado</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="escribir_puerto" id="i@HO`l.3|oxK@,NmOY7B">
+                                                    <field name="Port">B</field>
+                                                    <value name="val">
+                                                      <block type="math_number" id="Xt{fK8x;mNWofdoJ05qo">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="controls_if" id="C*w%NhRG-4e8?h4.Z,t[">
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="h8HM}jDef]gB(Uz5TXdA">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="obtener_valor_vector" id="r6IeSop;#dopsPCxNr)q">
+                                                    <field name="VAR" id="hc.R**-?8=m-X(;spKd}">vectorusuario</field>
+                                                    <value name="Posiciones">
+                                                      <block type="math_number" id=",1=N2nm5juvAZVUVi,GG">
+                                                        <field name="NUM">0</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="text" id="xsbI7`oK;j(zFJiAyDzd">
+                                                    <field name="TEXT">d</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="lcdi2c_clear" id="IRv=BeZ]J9[XrjFeOFp|">
+                                                <next>
+                                                  <block type="lcdi2c_escribirstring" id=".;i:V#]A2f3^*kG}jd{3">
+                                                    <value name="Texto">
+                                                      <block type="text" id="_Y3wKU*k18hWP,Z|V]O6">
+                                                        <field name="TEXT">Desactivado</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="escribir_puerto" id="5#OLBylL{]:aG.uN)`$O">
+                                                        <field name="Port">B</field>
+                                                        <value name="val">
+                                                          <block type="math_number" id="=kTh3.GzooH8G@hGwoPm">
+                                                            <field name="NUM">0</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="delayms" id="*jd$dAe3uSL-Geo2gx_}">
+                                                <value name="delay">
+                                                  <block type="math_number" id="sV1r_EljBcawjJ]XvIb]">
+                                                    <field name="NUM">20</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

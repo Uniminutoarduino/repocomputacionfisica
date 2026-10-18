@@ -1,0 +1,328 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="|s15S+nZ;o;!kzS|I8+R">presion</variable>
+    <variable id="2G%K?B@G6sk}q_|.d3sd">temperatura</variable>
+    <variable id="9JR!gaa:fHUT8pk~P(9!">vectortemp</variable>
+    <variable id="[$-;g#9Bv#!jKQvVy*QP">vectorpres</variable>
+  </variables>
+  <block type="variables_declare" id="?`YV79|XVT%Ct~H4FOfr" x="150" y="-50">
+    <field name="VAR" id="|s15S+nZ;o;!kzS|I8+R">presion</field>
+    <field name="TYPE">float</field>
+    <value name="VALUE">
+      <block type="math_number" id="tKLfm+OR%ayXDR`ONqc?">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_declare" id="aAdJ[H,fayoFa`[^DV/L">
+        <field name="VAR" id="2G%K?B@G6sk}q_|.d3sd">temperatura</field>
+        <field name="TYPE">float</field>
+        <value name="VALUE">
+          <block type="math_number" id="U_jc=0mgm`Z!g8_K~COT">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="declarar_vector" id=",O[GCBr7JC?UPZka:D;O">
+            <field name="VAR" id="9JR!gaa:fHUT8pk~P(9!">vectortemp</field>
+            <field name="Tipo">char</field>
+            <value name="Posiciones">
+              <block type="math_number" id="/Fhg(IB|]9X2OKU+fSE8">
+                <field name="NUM">6</field>
+              </block>
+            </value>
+            <next>
+              <block type="declarar_vector" id="S}RS62hSZcco48hf,)dd">
+                <field name="VAR" id="[$-;g#9Bv#!jKQvVy*QP">vectorpres</field>
+                <field name="Tipo">char</field>
+                <value name="Posiciones">
+                  <block type="math_number" id="n^F`@!1^z}v|]s).`UB.">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="configurar_puerto" id="oa}(0WG/K%g`Ev=w$OLV">
+                    <field name="Port">D</field>
+                    <value name="val">
+                      <block type="math_number" id="i8=A/S=UT|o`o_8D+*7D">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delayms" id=";}RK^:nT5%Ru#s7gUELT">
+                        <value name="delay">
+                          <block type="math_number" id="s.R?5V9d8|e,Je~S^AVs">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lcdi2c_init" id="#xHqw,xcU1]r#r_O1fOD">
+                            <next>
+                              <block type="lcdi2c_clear" id="^PjEFwxX:HCFuZDhbafd">
+                                <next>
+                                  <block type="controls_if" id="i[lwsYhv[d0Qd3boMM7,">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="Tejok4uq^O0$+;J:5oj3">
+                                        <field name="OP">NEQ</field>
+                                        <value name="A">
+                                          <block type="bme280_iniciar" id=",0d{Es52W/wafTlh8h;@"></block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="=zRYccO-b{l*q53gNb:1">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="lcdi2c_escribirstring" id="Z!!)w/:{{$Q/$sk:i^;-">
+                                        <value name="Texto">
+                                          <block type="text" id="cfkyvoTDOx2o3AZt$H6R">
+                                            <field name="TEXT">Error</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_whileUntil" id="xDec`$[Migm#M_GqhmAH">
+                                        <field name="MODE">WHILE</field>
+                                        <value name="BOOL">
+                                          <block type="logic_boolean" id=":{-1i)]K_H;+O,+I{Z`j">
+                                            <field name="BOOL">TRUE</field>
+                                          </block>
+                                        </value>
+                                        <statement name="DO">
+                                          <block type="variables_set" id="1/-R`zq2$d$$D;,Ahmx^">
+                                            <field name="VAR" id="2G%K?B@G6sk}q_|.d3sd">temperatura</field>
+                                            <value name="VALUE">
+                                              <block type="bme280_leertemperatura" id="r[QjkVOyrcPh,Mp])Ra$"></block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="D|(myOCLc]N[)4J5JBy=">
+                                                <field name="VAR" id="|s15S+nZ;o;!kzS|I8+R">presion</field>
+                                                <value name="VALUE">
+                                                  <block type="bme280_leerpresion" id="Jcmz^pQ%:P|_d:i,+Qnk"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="`~91R6EQD80VBsiL_wV@">
+                                                    <field name="VAR" id="|s15S+nZ;o;!kzS|I8+R">presion</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_arithmetic" id="E5`Pni#ci*BQ(,OJGY^8">
+                                                        <field name="OP">DIVIDE</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="#r-@s^3-ubw#qh,{.1vj">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="*y{%+2@LB@Q{r_w@q]xR">
+                                                            <field name="VAR" id="|s15S+nZ;o;!kzS|I8+R">presion</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="a-sL2)=d(hUnYllQ#ZWQ">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="math_number" id="}`A!o};(lY#|FM!V?bmE">
+                                                            <field name="NUM">100</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="sprintfun" id=";$_[Z$EF,.!x^PS,Z.HV">
+                                                        <field name="Opt">float</field>
+                                                        <field name="OptB">1</field>
+                                                        <value name="Nombre">
+                                                          <block type="variables_get" id="T:F%_E9bx@Grk$oQOf:T">
+                                                            <field name="VAR" id="9JR!gaa:fHUT8pk~P(9!">vectortemp</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="Variable">
+                                                          <block type="variables_get" id="Sa.eh7nq]Opq`oD!X#{b">
+                                                            <field name="VAR" id="2G%K?B@G6sk}q_|.d3sd">temperatura</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="sprintfun" id="M[mbD}imN],M`;yhOs1y">
+                                                            <field name="Opt">float</field>
+                                                            <field name="OptB">1</field>
+                                                            <value name="Nombre">
+                                                              <block type="variables_get" id="j.Dzf{kufZyiVeBcpp;3">
+                                                                <field name="VAR" id="[$-;g#9Bv#!jKQvVy*QP">vectorpres</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="Variable">
+                                                              <block type="variables_get" id="3FRYyOpB]aIi}(O$vDBP">
+                                                                <field name="VAR" id="|s15S+nZ;o;!kzS|I8+R">presion</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="lcdi2c_ir" id="];.)+QhwU@GS^(:xbF.c">
+                                                                <value name="Fila">
+                                                                  <block type="math_number" id="t37HHp}YYy4sDr^jCJ+4">
+                                                                    <field name="NUM">0</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Columna">
+                                                                  <block type="math_number" id="p;W0fwLRjR^(u:2snJ]N">
+                                                                    <field name="NUM">2</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="lcdi2c_escribirstring" id="dkz1:6-yvIZ.g~TA6`M,">
+                                                                    <value name="Texto">
+                                                                      <block type="text" id="a/dwAg36!UIM4_6f?|,n">
+                                                                        <field name="TEXT">Temp:</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="lcdi2c_ir" id="5wfe!haWMZOps0~{f}ew">
+                                                                        <value name="Fila">
+                                                                          <block type="math_number" id="Npm4?!H%flDrw0~O(r*;">
+                                                                            <field name="NUM">1</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Columna">
+                                                                          <block type="math_number" id="R#_Ph_r#@#k;k1-O%xNb">
+                                                                            <field name="NUM">2</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="lcdi2c_vector" id="Y%_.{A2P=`C+^e}-LPuB">
+                                                                            <value name="NAME">
+                                                                              <block type="variables_get" id="TAy[TdCaAlM1SULn[xyB">
+                                                                                <field name="VAR" id="9JR!gaa:fHUT8pk~P(9!">vectortemp</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="lcdi2c_ir" id="t0lp,wII6w50FbB_QSsg">
+                                                                                <value name="Fila">
+                                                                                  <block type="math_number" id="0~d1^Sw0Ff2F9${cT3kX">
+                                                                                    <field name="NUM">0</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="Columna">
+                                                                                  <block type="math_number" id="(}Ka_pTFOKkQDAn[*a;%">
+                                                                                    <field name="NUM">9</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="lcdi2c_escribirstring" id="JeKbc6?d5H;(D-?x(4Uq">
+                                                                                    <value name="Texto">
+                                                                                      <block type="text" id="}L2{Xq3/-o~lBwCZ35wC">
+                                                                                        <field name="TEXT">Pres(hPa):</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="lcdi2c_ir" id="5sbXxjr,:M9pL(LJKc~W">
+                                                                                        <value name="Fila">
+                                                                                          <block type="math_number" id="dHIqh^5UIqwbIP[F2`dK">
+                                                                                            <field name="NUM">1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="Columna">
+                                                                                          <block type="math_number" id="D~6U`w2*{^+t6F^mt{A=">
+                                                                                            <field name="NUM">9</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="lcdi2c_vector" id="0Yff_b`OBIBRM|^l4Dx`">
+                                                                                            <value name="NAME">
+                                                                                              <block type="variables_get" id="|y]a_sbrym=[i;T-5Q45">
+                                                                                                <field name="VAR" id="[$-;g#9Bv#!jKQvVy*QP">vectorpres</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="controls_if" id=";~ZVDCk`8FJLW22{,57l">
+                                                                                                <mutation else="1"></mutation>
+                                                                                                <value name="IF0">
+                                                                                                  <block type="logic_compare" id="2RL|Gm2CI^l}CDi7a;|+">
+                                                                                                    <field name="OP">GT</field>
+                                                                                                    <value name="A">
+                                                                                                      <block type="variables_get" id="OPABzYM38U62TTUN(0F6">
+                                                                                                        <field name="VAR" id="2G%K?B@G6sk}q_|.d3sd">temperatura</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="B">
+                                                                                                      <block type="math_number" id="yg!.h!AO:(W_y[oExnQ[">
+                                                                                                        <field name="NUM">40</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <statement name="DO0">
+                                                                                                  <block type="escribir_puerto" id="kT,*r19|p?_v?CGv+u1t">
+                                                                                                    <field name="Port">D</field>
+                                                                                                    <value name="val">
+                                                                                                      <block type="math_number" id="O~O8]nD=+K!HH..s}*ix">
+                                                                                                        <field name="NUM">8</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </statement>
+                                                                                                <statement name="ELSE">
+                                                                                                  <block type="escribir_puerto" id="u0r*1mHk!O5PVvUuki==">
+                                                                                                    <field name="Port">D</field>
+                                                                                                    <value name="val">
+                                                                                                      <block type="math_number" id="T=yY[kMw~(Rue,^?56?i">
+                                                                                                        <field name="NUM">0</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </statement>
+                                                                                                <next>
+                                                                                                  <block type="delayms" id="?]BtlzvRHW|ZrTN.+yrT">
+                                                                                                    <value name="delay">
+                                                                                                      <block type="math_number" id=")C~?.JcAES[B:v@ZH^;@">
+                                                                                                        <field name="NUM">100</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

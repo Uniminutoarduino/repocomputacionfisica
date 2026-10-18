@@ -1,0 +1,115 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="-jFo]k|LHo%:xi|PDqCG">Distancia</variable>
+    <variable id="J9,u$4o*N~A2JgpVL1K-">vectordis</variable>
+  </variables>
+  <block type="variables_declare" id="`A(Ga2)dbaU*#{=5%[~|" x="250" y="10">
+    <field name="VAR" id="-jFo]k|LHo%:xi|PDqCG">Distancia</field>
+    <field name="TYPE">float</field>
+    <value name="VALUE">
+      <block type="math_number" id="juvE(7slZM];[Qp!ixW8">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="declarar_vector" id="kR@{M~B2J@_)J0f{goUM">
+        <field name="VAR" id="J9,u$4o*N~A2JgpVL1K-">vectordis</field>
+        <field name="Tipo">char</field>
+        <value name="Posiciones">
+          <block type="math_number" id="6f%fzcCFO.1yUUD5X-R)">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <next>
+          <block type="lcd_init" id="t^(%k.^+Ngo-iipl{nk1">
+            <next>
+              <block type="lcd_clear" id="j[JR)Z[q;4,65|Tpt,VE">
+                <next>
+                  <block type="controls_whileUntil" id="k0tKSP3a%hVGFF4jv^da">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_boolean" id="~[J3tUJ;T`x28WUZ*uAQ">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="variables_set" id="]jL+N[dtZ0aJm01{14a:">
+                        <field name="VAR" id="-jFo]k|LHo%:xi|PDqCG">Distancia</field>
+                        <value name="VALUE">
+                          <block type="hc04" id="v@J6;3Sc#n{_9p1N0|~n">
+                            <value name="Rango">
+                              <block type="math_number" id="s$N~!4Q3q.#$jqr;a].z">
+                                <field name="NUM">40</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="sprintfun" id="h.cH](si0F%!P%$NCI.X">
+                            <field name="Opt">float</field>
+                            <field name="OptB">1</field>
+                            <value name="Nombre">
+                              <block type="variables_get" id="dr:S*b:6[fDn]Ww.2RtY">
+                                <field name="VAR" id="J9,u$4o*N~A2JgpVL1K-">vectordis</field>
+                              </block>
+                            </value>
+                            <value name="Variable">
+                              <block type="variables_get" id="1Q/oiY(hUKVyZEV[3Yx5">
+                                <field name="VAR" id="-jFo]k|LHo%:xi|PDqCG">Distancia</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="lcd_ir" id="vl3R|x;{CAkm6Z{(`{C{">
+                                <value name="Fila">
+                                  <block type="math_number" id="Rofxj`z+~YO5lJ@Wu6S^">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <value name="Columna">
+                                  <block type="math_number" id="|jvh~|!1Ft48A;2/4x4K">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="lcd_escribirstring" id="*8{Y%kzRv%B+PrSc2BSU">
+                                    <value name="Texto">
+                                      <block type="text" id="?cB#CqYm#]:2#[.b{?aB">
+                                        <field name="TEXT">Dis(cm):</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="lcd_vector" id="TB)BCnUn2-IBA0/jB3Sm">
+                                        <value name="NAME">
+                                          <block type="variables_get" id=":2ZH}ONh`R`DEE~guhL3">
+                                            <field name="VAR" id="J9,u$4o*N~A2JgpVL1K-">vectordis</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="delayms" id="M|SkGdFYYWJEXy`-g{=j">
+                                            <value name="delay">
+                                              <block type="math_number" id="OaAie3I#yX{):DKitYWh">
+                                                <field name="NUM">100</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

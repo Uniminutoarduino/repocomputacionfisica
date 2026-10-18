@@ -1,0 +1,90 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="configurar_puerto" id="DM5FNK!o|DH#ObGZ%y0J" x="-410" y="-190">
+    <field name="Port">D</field>
+    <value name="val">
+      <block type="math_number" id="qh|7(ZfuAoYo2)mK;Mg$">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="71e*:5c$%:7dZ=TFUe[?">
+        <field name="MODE">WHILE</field>
+        <value name="BOOL">
+          <block type="logic_boolean" id="_8[S:r4wU-aqxAV|8M!r">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="Gq|~#Mz{)k6Ekc@523!g">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_operation" id="0-bXi4mEy_;_wgy;Q=L@">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="ckq#-;haekp^(SPzRqY+">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="leer_pin" id="~d%b=9hiKIql;0y0KG03">
+                        <field name="Port">D</field>
+                        <value name="pin">
+                          <block type="math_number" id="E{rSDY|3b~|6x9~/Sa2m">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="(qc8_tm9*=RRh^O_~C+?">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="j,kLW{ya}%qp2p]YGcS_">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="leer_pin" id="t:mG)5F/=zg9K3e5A8]f">
+                        <field name="Port">D</field>
+                        <value name="pin">
+                          <block type="math_number" id="C4fK#m=1_vR9*1aY7sn.">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="y%cw+^Ja@(*H%u;ibgow">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="escribir_puerto" id="BQ0NsF::VJ2D-z;sO/PY">
+                <field name="Port">D</field>
+                <value name="val">
+                  <block type="math_number" id="Kw*R@@U)Tvof`X)VJv(d">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="escribir_puerto" id="R1ri9[!~)!B}A$9$$2#1">
+                <field name="Port">D</field>
+                <value name="val">
+                  <block type="math_number" id=")(?R=ivSeo7%m8%7#/@x">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,97 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="delayms" id="`/q,e*w8HoO`(re#mJA+" x="-530" y="-410">
+    <value name="delay">
+      <block type="math_number" id="OKD`:P2h16v{!$-d2dRZ">
+        <field name="NUM">100</field>
+      </block>
+    </value>
+    <next>
+      <block type="configurar_puerto" id="=gL1-*zlw~whXjq.=[Uc">
+        <field name="Port">B</field>
+        <value name="val">
+          <block type="math_number" id="^pwk_Y`q{XB:By}*}aZh">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="lcdi2c_init" id="/;R+84Q/c]d{4r.Z)Lj%">
+            <next>
+              <block type="lcdi2c_clear" id="hsE@b2~zQr=;X(JFiH3C">
+                <next>
+                  <block type="controls_whileUntil" id="~T?EyGM?B7tEj.?M~aU4">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_boolean" id="uQVJ[Am5S8|:@v*:eQfC">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="controls_if" id="ua*7Hh[[!Mcg;e`mXf=I">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="gwad`9y84tb%U+HW7p!a">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="leer_pin" id="E#Z9CrA+l@ly%3WEOQMU">
+                                <field name="Port">B</field>
+                                <value name="pin">
+                                  <block type="math_number" id="!.q(A@V6#2bZRO]=|ajj">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="jBYq0`nb)^3f.H7c3nVq">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="lcdi2c_clear" id=".)3HR2a3ieY+*ab_aoxp">
+                            <next>
+                              <block type="lcdi2c_escribirstring" id="Y[B}!uPqlE6iWP|0MJ#w">
+                                <value name="Texto">
+                                  <block type="text" id="8ps*5y$9{2yjz!YrfCpy">
+                                    <field name="TEXT">Presionado</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="lcdi2c_clear" id=")U!}J9|t#fyu!?UoXz}2">
+                            <next>
+                              <block type="lcdi2c_escribirstring" id="|kxi(Zfar_x_fPCPMKkm">
+                                <value name="Texto">
+                                  <block type="text" id="CwVXL7@@qGOq%O`7_O(!">
+                                    <field name="TEXT">No presionado</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="delayms" id="VFE(FRybyB$@tW/BL~ZE">
+                            <value name="delay">
+                              <block type="math_number" id="Ndp_JcO5|xoTQ$Aue:@x">
+                                <field name="NUM">50</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,249 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="dn4ozI$IEJwuHVElp:Tf">vector</variable>
+    <variable id=".4u7FNKHpps{AHD/S|RC">adc</variable>
+    <variable id="m#-^n1.=O6M#Ie}MZ1_y">Temperatura</variable>
+  </variables>
+  <block type="declarar_vector" id="TvCihJ!Q|8dXP4[Rh+4A" x="250" y="-30">
+    <field name="VAR" id="dn4ozI$IEJwuHVElp:Tf">vector</field>
+    <field name="Tipo">char</field>
+    <value name="Posiciones">
+      <block type="math_number" id="-Kn(X@):sJ4b691[?xY]">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_declare" id="eDdm1u!jL5F!X#p)/S+j">
+        <field name="VAR" id=".4u7FNKHpps{AHD/S|RC">adc</field>
+        <field name="TYPE">int</field>
+        <value name="VALUE">
+          <block type="math_number" id="sq1#p42+I/R#T7N8i-T7">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_declare" id=".gt)!3)G-|jdJ#xSvDV=">
+            <field name="VAR" id="m#-^n1.=O6M#Ie}MZ1_y">Temperatura</field>
+            <field name="TYPE">float</field>
+            <value name="VALUE">
+              <block type="math_number" id="okz,BzA{([2vCG%1.(z*">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="configurar_puerto" id=")OZ4U!|[+Gz]?e`,}:*0">
+                <field name="Port">D</field>
+                <value name="val">
+                  <block type="math_number" id="TEIhtrjm$~M_]1=P=|].">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="delayms" id="8hM*aRd+5:O@5ZM~:Kbl">
+                    <value name="delay">
+                      <block type="math_number" id="v,D#7S!;4W=,{R.}K.$?">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_iniciar" id="^2,]9t|K/*!}s_J|VYN(">
+                        <next>
+                          <block type="oled_reset" id="=QqcIK:HWsR20zrdsUmJ">
+                            <next>
+                              <block type="controls_whileUntil" id="Rs!}cXOjN4%Uy5W]2$`=">
+                                <field name="MODE">WHILE</field>
+                                <value name="BOOL">
+                                  <block type="logic_boolean" id="/+Oyh!4}=6`9ea#.~0~;">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="variables_set" id="x69}ONC#(05WJuqak8W{">
+                                    <field name="VAR" id=".4u7FNKHpps{AHD/S|RC">adc</field>
+                                    <value name="VALUE">
+                                      <block type="adc_leercanal" id="]XKCQ|M4Y,pUnKk+ae9s">
+                                        <value name="channel">
+                                          <block type="math_number" id="3xpFIR2Oc[_kt|7]1#BW">
+                                            <field name="NUM">2</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="|`39uZIhF8!C!+#qM:rh">
+                                        <field name="VAR" id="m#-^n1.=O6M#Ie}MZ1_y">Temperatura</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="(Qmt6#7s,3sRBlSS5ER6">
+                                            <field name="OP">MULTIPLY</field>
+                                            <value name="A">
+                                              <shadow type="math_number" id="I3PGgosQ?(QBMA(^7t/F">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="math_number" id="IVTS`8jQ4(/#1:/yzTa)">
+                                                <field name="NUM">0.4882</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="Bz@i{Q#sLqCt(8##]@X]">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id=",)K1[:#8bK;AU#YOff%1">
+                                                <field name="VAR" id=".4u7FNKHpps{AHD/S|RC">adc</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="oled_posicion" id="v[``hgh]NkVG4FZt]FX5">
+                                            <value name="x">
+                                              <block type="math_number" id=":cA`9-zPz!}+a92j5prg">
+                                                <field name="NUM">3</field>
+                                              </block>
+                                            </value>
+                                            <value name="y">
+                                              <block type="math_number" id="E;;o911[??H$N=_RELh#">
+                                                <field name="NUM">48</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="oled_enviartexto" id="[.=*]bMP~SiC+.UZFfgI">
+                                                <value name="x">
+                                                  <block type="text" id="e?FXcIM`^TXrx[-UxE!l">
+                                                    <field name="TEXT">Temperatura:</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="sprintfun" id="{oMjZh8-e2qBh~1sBU)e">
+                                                    <field name="Opt">float</field>
+                                                    <field name="OptB">1</field>
+                                                    <value name="Nombre">
+                                                      <block type="variables_get" id="@9uxC_B1)Ztve9U|SPN@">
+                                                        <field name="VAR" id="dn4ozI$IEJwuHVElp:Tf">vector</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="Variable">
+                                                      <block type="variables_get" id="!,{^n{4XycO]/JNJ#~s6">
+                                                        <field name="VAR" id="m#-^n1.=O6M#Ie}MZ1_y">Temperatura</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="oled_enviarvector" id="XwU`WBjPN714#tY3aC~z">
+                                                        <value name="vector">
+                                                          <block type="variables_get" id="=@KQCob4g}nKR)2a`k`F">
+                                                            <field name="VAR" id="dn4ozI$IEJwuHVElp:Tf">vector</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="controls_if" id="dc#k`||];XA/pe[@a[|j">
+                                                            <mutation else="1"></mutation>
+                                                            <value name="IF0">
+                                                              <block type="logic_compare" id="DaL_b|*i:BVxX0*HC,g^">
+                                                                <field name="OP">GT</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id="!-`4j1;)bGBCm2hIH/a,">
+                                                                    <field name="VAR" id="m#-^n1.=O6M#Ie}MZ1_y">Temperatura</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="6:W6[H`Z2Smty_GFjb{S">
+                                                                    <field name="NUM">45</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                              <block type="escribir_puerto" id="ai0[TeSsX3.,h-`^3#6z">
+                                                                <field name="Port">D</field>
+                                                                <value name="val">
+                                                                  <block type="math_number" id="P6yH7sJ~o~85{7KqXY|_">
+                                                                    <field name="NUM">4</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_posicion" id="|od5YRn:N2OXc!s%,+jQ">
+                                                                    <value name="x">
+                                                                      <block type="math_number" id="f][]i1$Kl!c{ex$u(f0g">
+                                                                        <field name="NUM">5</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="y">
+                                                                      <block type="math_number" id="cNR(?Bv!}RO(dG=*nGtf">
+                                                                        <field name="NUM">48</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="oled_enviartexto" id="ehg#c(pXvvp0??^lz.pm">
+                                                                        <value name="x">
+                                                                          <block type="text" id="IF*@0]/;NuWtclO{%+[r">
+                                                                            <field name="TEXT">Maximo</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                              <block type="escribir_puerto" id="iRWQ].y#H$1Ma]rdX$*a">
+                                                                <field name="Port">D</field>
+                                                                <value name="val">
+                                                                  <block type="math_number" id=".J7_QB-;s2DXUUUbu4zC">
+                                                                    <field name="NUM">0</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_posicion" id="kCcKA?Pg%e6;ZTDxZE@N">
+                                                                    <value name="x">
+                                                                      <block type="math_number" id="*M`_9A+hM,K.|!5P_%NU">
+                                                                        <field name="NUM">5</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="y">
+                                                                      <block type="math_number" id="Wi$M?%A*%pZuC_izkDpD">
+                                                                        <field name="NUM">48</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="oled_enviartexto" id="GR,dLWuFJl|MXSW:p!K5">
+                                                                        <value name="x">
+                                                                          <block type="text" id="x!NYsS^syB#!5X`VQ,uY">
+                                                                            <field name="TEXT">En rango</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

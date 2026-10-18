@@ -1,0 +1,105 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="uJy/kt7GvpXyXMGg:rTw">k</variable>
+  </variables>
+  <block type="variables_declare" id="eGq#e4HF3OMD);MbUlmE" x="-370" y="-470">
+    <field name="VAR" id="uJy/kt7GvpXyXMGg:rTw">k</field>
+    <field name="TYPE">int</field>
+    <value name="VALUE">
+      <block type="math_number" id="Y}}~lz$|]YG2/?2ckY#p">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="delayms" id="`/q,e*w8HoO`(re#mJA+">
+        <value name="delay">
+          <block type="math_number" id="OKD`:P2h16v{!$-d2dRZ">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+        <next>
+          <block type="lcdi2c_init" id="/;R+84Q/c]d{4r.Z)Lj%">
+            <next>
+              <block type="lcdi2c_clear" id="hsE@b2~zQr=;X(JFiH3C">
+                <next>
+                  <block type="controls_whileUntil" id="~T?EyGM?B7tEj.?M~aU4">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_boolean" id="uQVJ[Am5S8|:@v*:eQfC">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="controls_for" id="dtMd1+*Gxr}3!;[mb#$J">
+                        <field name="VAR" id="uJy/kt7GvpXyXMGg:rTw">k</field>
+                        <value name="FROM">
+                          <shadow type="math_number" id="n9q)fC93U1^8$5u#kpI4">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="*E(`8m51OKRA-fDxmWHm">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <shadow type="math_number" id="=j:N5HnJ*2a(Ql!gU2a_">
+                            <field name="NUM">10</field>
+                          </shadow>
+                          <block type="math_number" id="YKVlF~]%YFJfCPdGweWQ">
+                            <field name="NUM">20</field>
+                          </block>
+                        </value>
+                        <value name="BY">
+                          <shadow type="math_number" id="w{M=,#{?=N*;?FO5Cl)6">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="yh!@oaDV~XgC!JA%#q7W">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="lcdi2c_ir" id="[u~U+Fyk{gtS/0Zd!Ka7">
+                            <value name="Fila">
+                              <block type="math_number" id="!}A#wN=a.upY^bzgG{1n">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <value name="Columna">
+                              <block type="variables_get" id="[CN.]39_h[U1m|=It`h}">
+                                <field name="VAR" id="uJy/kt7GvpXyXMGg:rTw">k</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="lcdi2c_escribirstring" id="Y[B}!uPqlE6iWP|0MJ#w">
+                                <value name="Texto">
+                                  <block type="text" id="8ps*5y$9{2yjz!YrfCpy">
+                                    <field name="TEXT">Hola Mundo</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="delayms" id="VFE(FRybyB$@tW/BL~ZE">
+                                    <value name="delay">
+                                      <block type="math_number" id="Ndp_JcO5|xoTQ$Aue:@x">
+                                        <field name="NUM">600</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="lcdi2c_clear" id=".)3HR2a3ieY+*ab_aoxp"></block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,81 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="configurar_puerto" id="@={S6.zP/A~*~,bF/Fpk" x="-370" y="50">
+    <field name="Port">B</field>
+    <value name="val">
+      <block type="math_number" id="JaHXR($Vtmdi]Yuf_u[S">
+        <field name="NUM">2</field>
+      </block>
+    </value>
+    <next>
+      <block type="escribir_puerto" id="+XQ{5H%autwAkqEt.4T!">
+        <field name="Port">B</field>
+        <value name="val">
+          <block type="math_number" id="Zf*ls,y?5ol_6HEPP~$Q">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="pwmconfigOC1" id="5!dQ31rfo*;kkYY:rUKX">
+            <field name="Nbits">8</field>
+            <field name="Preescala">64</field>
+            <next>
+              <block type="controls_whileUntil" id="71e*:5c$%:7dZ=TFUe[?">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_boolean" id="_8[S:r4wU-aqxAV|8M!r">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="Gq|~#Mz{)k6Ekc@523!g">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="ckq#-;haekp^(SPzRqY+">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_pin" id="I`ru~V+=iJ[st9!t!Als">
+                            <field name="Port">B</field>
+                            <value name="pin">
+                              <block type="math_number" id="qk%Bh.fTz@~$b-`;h;1G">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="(qc8_tm9*=RRh^O_~C+?">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="dutyconfig1" id="Ck.2K@,|Xh^le_v=a|R+">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="tHRw[zod69`4ji:j+8g0">
+                            <field name="NUM">0.5</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="dutyconfig1" id="D-U5.BTCS364uFV0C$?E">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="u]B1d`P@9l^uP#[hd6R=">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

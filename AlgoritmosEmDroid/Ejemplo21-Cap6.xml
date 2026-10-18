@@ -1,0 +1,329 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="configurar_puerto" id="t8=XMGRq0:q)8kfWp7]?" x="330" y="-250">
+    <field name="Port">C</field>
+    <value name="val">
+      <block type="math_number" id="!L5@g6RN!K9;~o)Rp~8L">
+        <field name="NUM">240</field>
+      </block>
+    </value>
+    <next>
+      <block type="pwmconfigOC1" id="=R5y=lX_piu=t33WF`/4">
+        <field name="Nbits">8</field>
+        <field name="Preescala">64</field>
+        <next>
+          <block type="delayms" id="/aPrl-;_YIQV$h-lKAfv">
+            <value name="delay">
+              <block type="math_number" id=",ayIltt14@gsoo*2B,c0">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="RgYcf-Tehr@LwJyapbn:">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_boolean" id="lXJ)VANtLf0`4a[L[jq#">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="GP9~;yg9VgVT8vPZ?|To">
+                    <mutation elseif="7"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="7IQdHk0Hn)s21+Ta)J@4">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="94%Y(k?s)p/pp2UaAuYu">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="dG~xFU{7v^Q|P8`a{H-o">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="dutyconfig1" id="UIg8Ef|h2N7/N*Ico:^|">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="m;GS^6k42p.C~4rPG*Lv">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="J+Kw9pH.?sAP;07}K.2z">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="eBct,([r@uk+:ptmr2LD">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="~Ruue9$-IX6}6y]jPoof">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="m^Y5qqOd/fsITi3+;D8[">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="0y8)3X?0iEMW9Jox.H,U">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="dutyconfig1" id="FhfYA-UcDZ,mO.7Au4}u">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="D`pG0dY]~P0_YdR_F,z:">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="|!w1+/1xCBOCg)yyT-G~">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id=";+C{U}S#tjyc;J)!n(;8">
+                                <field name="NUM">0.2</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF2">
+                      <block type="logic_compare" id="8CR.^FT(j|igl,6[P~vj">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="Ex/8Ij%_mhEmM|^IL4[@">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="26Env:^u]0rWr4}Tty-r">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO2">
+                      <block type="dutyconfig1" id="c5^~jgZRP$||=g|+Ncep">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="2H6pQ}K?=gt`e0r0tGA`">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="Te3-7^.zyKsGk`f(f;kW">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="4TiJHTs)Ne*xI|50v3)r">
+                                <field name="NUM">0.4</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF3">
+                      <block type="logic_compare" id="/]YR^{=X_ajt8lW{W|`Y">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="i0#hYanco0/kl`;7wi$P">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="]du-GI%@w-}9T8|WO{Ut">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO3">
+                      <block type="dutyconfig1" id="48bgMv-9/QX1WGB,-`gB">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="N/R3V.a8]{JmH@z{secf">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="_#4}C*BFMlp@Hpfjfw,i">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="Qbp$aJO07Vn;vhHx?Pjx">
+                                <field name="NUM">0.2</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF4">
+                      <block type="logic_compare" id="$+ozjzq$6$%W~n_#@erb">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="!y//wzmCS@#iR}!36g}Q">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="?*ZH/A=o@iEx[=0)E2gI">
+                            <field name="NUM">4</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO4">
+                      <block type="dutyconfig1" id="Di!VsRX)/Mc6m{OhnQXY">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id=":5{F`ZX(@c~B{;j]jrV#">
+                            <field name="NUM">0.4</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="3(cdO9aXzn]]]X8L/d_R">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="nZt=Zs=ruk55?WFSj[nO">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF5">
+                      <block type="logic_compare" id="iOj2|j)c[iXN:%%@uR3+">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id=",n:5Vw|H}jhP^DrmcCdU">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="d]7r=4SRsVx/dPALiA(.">
+                            <field name="NUM">6</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO5">
+                      <block type="dutyconfig1" id=")MWrsWDT?%EHqtvU;TN(">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="8$?D2KMJgR,qOccb{U/L">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="r^w_O0Xesc`b4V9u|%ee">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="@#]b@p4(MiVKw)JEr=Ca">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF6">
+                      <block type="logic_compare" id="PRHYEsTcHa{utLZ4k*JX">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="ZekK$N$D{hja,~SP/MxF">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="JCS(b#|3l@)Ze5$fGBUe">
+                            <field name="NUM">8</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO6">
+                      <block type="dutyconfig1" id="E^Lv7k6`4QLMM~5?r(}t">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="jCav,F3QoLOVcC5zu0[j">
+                            <field name="NUM">0.2</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="o*:.tRMi_.+K!QX-z;~5">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="X~u}~P7$phZ!6vx+p;#7">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF7">
+                      <block type="logic_compare" id="9Wfz^H2l(fzd(lNc*#Y?">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_puerto" id="1!V=MGrEunV?,;TeSS4{">
+                            <field name="Port">C</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="vI6y.m!%5V5x#1L,tvK[">
+                            <field name="NUM">12</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO7">
+                      <block type="dutyconfig1" id="5glNSsAnZk`uj[B_W~YB">
+                        <field name="Canal">0</field>
+                        <value name="NAME">
+                          <block type="math_number" id="e[_Ed6wkK^93*~as~No2">
+                            <field name="NUM">0.2</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dutyconfig1" id="oK4)Zpg(qL1wtvZEIOip">
+                            <field name="Canal">1</field>
+                            <value name="NAME">
+                              <block type="math_number" id="esL,+D|{hWYO4Ezf)jMN">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="delayms" id="W_=2pVtO0RTeE1lrA#zY">
+                        <value name="delay">
+                          <block type="math_number" id="1v};Jvmlr)WMSL(rjp;c">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

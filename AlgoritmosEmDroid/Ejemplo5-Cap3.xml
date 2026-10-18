@@ -1,0 +1,146 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="o:DqRTnbBamTXelh,cKg">i</variable>
+  </variables>
+  <block type="variables_declare" id="QU/LKI,YJ8?)SP^lZPR?" x="-390" y="-150">
+    <field name="VAR" id="o:DqRTnbBamTXelh,cKg">i</field>
+    <field name="TYPE">int</field>
+    <value name="VALUE">
+      <block type="math_number" id="C|G@)ly6BC2y.[TEV=jk">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="configurar_puerto" id="@={S6.zP/A~*~,bF/Fpk">
+        <field name="Port">D</field>
+        <value name="val">
+          <block type="math_number" id="JaHXR($Vtmdi]Yuf_u[S">
+            <field name="NUM">12</field>
+          </block>
+        </value>
+        <next>
+          <block type="escribir_puerto" id="+XQ{5H%autwAkqEt.4T!">
+            <field name="Port">D</field>
+            <value name="val">
+              <block type="math_number" id="Zf*ls,y?5ol_6HEPP~$Q">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="71e*:5c$%:7dZ=TFUe[?">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_boolean" id="_8[S:r4wU-aqxAV|8M!r">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="Gq|~#Mz{)k6Ekc@523!g">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="ckq#-;haekp^(SPzRqY+">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="leer_pin" id="I`ru~V+=iJ[st9!t!Als">
+                            <field name="Port">D</field>
+                            <value name="pin">
+                              <block type="math_number" id="qk%Bh.fTz@~$b-`;h;1G">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="(qc8_tm9*=RRh^O_~C+?">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_for" id="^@Cv3eaN?SIOnnVw%me0">
+                        <field name="VAR" id="o:DqRTnbBamTXelh,cKg">i</field>
+                        <value name="FROM">
+                          <shadow type="math_number" id="plj?pB#2F0wcQx=5XGCY">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="0/_pGTwVphurDHU__@m8">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <shadow type="math_number" id="GD$bj8v=T2B|#kDiYAnl">
+                            <field name="NUM">10</field>
+                          </shadow>
+                          <block type="math_number" id="mi;kfv!hvuv=FLGvRuS.">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
+                        <value name="BY">
+                          <shadow type="math_number" id="+8q^?qJ3i}7%+42k9E4V">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="=w)w%/8sqT*;+rO=yYFT">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="escribir_puerto" id="BQ0NsF::VJ2D-z;sO/PY">
+                            <field name="Port">D</field>
+                            <value name="val">
+                              <block type="math_number" id="Kw*R@@U)Tvof`X)VJv(d">
+                                <field name="NUM">12</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="delayms" id="?}=u^kD#B^JS4YIQlOMQ">
+                                <value name="delay">
+                                  <block type="math_number" id=")~0ZUi;tS.$*X=bV{/N;">
+                                    <field name="NUM">500</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="escribir_puerto" id="i:QkIa(}WQF)D1J)bvG~">
+                                    <field name="Port">D</field>
+                                    <value name="val">
+                                      <block type="math_number" id="=#=}^E8}Li#%DRnG:e!k">
+                                        <field name="NUM">4</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="delayms" id="hgKU:=d/4/9zcu5b}$$8">
+                                        <value name="delay">
+                                          <block type="math_number" id="oEZlw(+~R7{{:6dv+)8$">
+                                            <field name="NUM">500</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="escribir_puerto" id="1uT[K9@1=rXgB-dlNX%b">
+                        <field name="Port">D</field>
+                        <value name="val">
+                          <block type="math_number" id="ko;p0t9yhQ?z5:GjJ+@e">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

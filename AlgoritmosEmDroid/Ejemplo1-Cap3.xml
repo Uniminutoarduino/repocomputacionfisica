@@ -1,0 +1,65 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="configurar_puerto" id="n|?;l%3Z{,YcEn^xUo^Q" x="310" y="-10">
+    <field name="Port">B</field>
+    <value name="val">
+      <block type="math_number" id="|x#NC^O]H;C8E-pwxZ+V">
+        <field name="NUM">2</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="b[|/ixgeP4dm_K9w/q3T">
+        <field name="MODE">WHILE</field>
+        <value name="BOOL">
+          <block type="logic_boolean" id="cz5Tolpqs~(X=)gVp%VP">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="~Kc_I#::++hzW*xvSz6O">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="Jt2`jyS4p/5-U*-Qirl]">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="leer_pin" id="Ff,-}d%[8JZ(H_1G/!DL">
+                    <field name="Port">B</field>
+                    <value name="pin">
+                      <block type="math_number" id="VwE`l)]rPyexvf@P2?GY">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="oYkp`I$`Aq]WE$dNC!Ge">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="escribir_puerto" id="z4x)g$}kJj_xq[U1bnYC">
+                <field name="Port">B</field>
+                <value name="val">
+                  <block type="math_number" id="wKZ;vW/aRH86#oRR/Y0D">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="escribir_puerto" id="_UmR#0k+dE6t?O[{U9z@">
+                <field name="Port">B</field>
+                <value name="val">
+                  <block type="math_number" id="P!GTZqjGbef4zc%O/ejG">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

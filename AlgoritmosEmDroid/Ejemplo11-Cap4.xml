@@ -1,0 +1,299 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="dn4ozI$IEJwuHVElp:Tf">vector</variable>
+    <variable id="rGqJXw#;nWUFAm%v-F{[">antirebote</variable>
+    <variable id=",~.OwQk6.Jh,t7$lvib5">conteo</variable>
+  </variables>
+  <block type="declarar_vector" id="?)[vC{;a81Pye^w^@SlL" x="-474" y="9">
+    <field name="VAR" id="dn4ozI$IEJwuHVElp:Tf">vector</field>
+    <field name="Tipo">char</field>
+    <value name="Posiciones">
+      <block type="math_number" id="~[CdFg15wt0fA.~xG[jl">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_declare" id="XE,clX1?BEYIY$#gnQps">
+        <field name="VAR" id="rGqJXw#;nWUFAm%v-F{[">antirebote</field>
+        <field name="TYPE">int</field>
+        <value name="VALUE">
+          <block type="math_number" id="XeF6)lpx!y`/qefg7:Sj">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_declare" id="cH47Sy/Nf]@VzIJm:LAj">
+            <field name="VAR" id=",~.OwQk6.Jh,t7$lvib5">conteo</field>
+            <field name="TYPE">int</field>
+            <value name="VALUE">
+              <block type="math_number" id="sN(a|m/=Nt|wn9Ia2,.+">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="configurar_puerto" id="RQSI=@`c:@,Z?oRkXfX0">
+                <field name="Port">B</field>
+                <value name="val">
+                  <block type="math_number" id="NJwAQ7RbcU}r(2VZ?5;I">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="delayms" id="aR-8Ib_+2f)qaKo,w-0h">
+                    <value name="delay">
+                      <block type="math_number" id="_|2[9[7@@~%0R#)PMTFK">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_iniciar" id="p*A^;})z:rkiD/HwS1xA">
+                        <next>
+                          <block type="oled_reset" id="E~+6t=m9aLYMZ.[QKHZo">
+                            <next>
+                              <block type="controls_whileUntil" id="2yf:3650::a3u,Zlg15(">
+                                <field name="MODE">WHILE</field>
+                                <value name="BOOL">
+                                  <block type="logic_boolean" id="Gzdu.dSFKj`m@}H{N]5Q">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="controls_if" id="6l96TJQkLu1CJ3Tb`kVm">
+                                    <value name="IF0">
+                                      <block type="logic_operation" id="3-+#WQ@5T$xzL1jh2}AA">
+                                        <field name="OP">AND</field>
+                                        <value name="A">
+                                          <block type="logic_compare" id="K~KPaj.%5*)T$oI(7pe6">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="vO8afT=4]y+)09-!,|be">
+                                                <field name="VAR" id="rGqJXw#;nWUFAm%v-F{[">antirebote</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="4cU0_iF=r[aXSwSm;q%X">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="logic_compare" id="mP4CDU]JK,Cjy1=r}U8M">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="leer_pin" id="Eto480T]Xm6T2[]{-W~m">
+                                                <field name="Port">B</field>
+                                                <value name="pin">
+                                                  <block type="math_number" id="$9(D=[MjTE#QX..y3oY4">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id=":[ZQ#A+9;d4V]9B`QoDr">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="variables_set" id=";URj4*MoIxjRWv`1du3G">
+                                        <field name="VAR" id="rGqJXw#;nWUFAm%v-F{[">antirebote</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="J1U~]-CFYCn/dD$oeJQz">
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id="9`tg)R`;FF:9[p+El3`L">
+                                        <value name="IF0">
+                                          <block type="logic_operation" id="cfNPZDs%WWum2k(?9FXo">
+                                            <field name="OP">AND</field>
+                                            <value name="A">
+                                              <block type="logic_compare" id=";IdxX(1)qN}%q$+N^7To">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="Tll=,-U..C4/435SG2KW">
+                                                    <field name="VAR" id="rGqJXw#;nWUFAm%v-F{[">antirebote</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="eg+YwNGJ5BJ5oZEV4qt0">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="logic_compare" id="V]arUDJ-Ie}E;bpJWQ~$">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="leer_pin" id="FPrN33@6{x0=Q8f#IV:.">
+                                                    <field name="Port">B</field>
+                                                    <value name="pin">
+                                                      <block type="math_number" id="K?+{$@1YZF~#G`*}=62F">
+                                                        <field name="NUM">0</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="|AV,}=6Xr0UGn1l3BE#z">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="variables_set" id="aeth:?UN/Kk5KSQrs6n:">
+                                            <field name="VAR" id="rGqJXw#;nWUFAm%v-F{[">antirebote</field>
+                                            <value name="VALUE">
+                                              <block type="math_number" id="1D?pUXxIOi)+SXP`lbuQ">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="oled_borrar" id="(n%!r(k-lW$m/}16ZrQc">
+                                                <next>
+                                                  <block type="oled_posicion" id="*ecyR}%FxmhpXgY%CyAs">
+                                                    <value name="x">
+                                                      <block type="math_number" id="MAd}~25C1vgoJH3`NgCw">
+                                                        <field name="NUM">3</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="y">
+                                                      <block type="math_number" id="+uN2hr}f(hx`!J)F1H]{">
+                                                        <field name="NUM">50</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="oled_enviartexto" id=".^xD_H|:n`Msy{PbA/$j">
+                                                        <value name="x">
+                                                          <block type="text" id="TW7|VG*3|1:yx!rQpka7">
+                                                            <field name="TEXT">Conteo: </field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="variables_set" id="pVM~xe;G/Q_a9:Y`Y#P0">
+                                                            <field name="VAR" id=",~.OwQk6.Jh,t7$lvib5">conteo</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id="]Ot.XVft85.cy)T-W[7[">
+                                                                <field name="OP">ADD</field>
+                                                                <value name="A">
+                                                                  <shadow type="math_number" id="u^K=|*a2C;Nt`;)jWW3h">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="f[Lnq57S6kSO:o2,saHL">
+                                                                    <field name="VAR" id=",~.OwQk6.Jh,t7$lvib5">conteo</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <shadow type="math_number" id="fZrS`?-tGSF2/ueJrSL;">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="math_number" id="FT0zS;8Rg$m_]*Y.T-w;">
+                                                                    <field name="NUM">1</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="sprintfun" id="39IZOf`bqwag*6a($}^J">
+                                                                <field name="Opt">int</field>
+                                                                <field name="OptB">0</field>
+                                                                <value name="Nombre">
+                                                                  <block type="variables_get" id="v?Y$,u_{BS8x5!O|8Wx%">
+                                                                    <field name="VAR" id="dn4ozI$IEJwuHVElp:Tf">vector</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Variable">
+                                                                  <block type="variables_get" id="H#GOfk).AvOm?e!:}x=n">
+                                                                    <field name="VAR" id=",~.OwQk6.Jh,t7$lvib5">conteo</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_enviarvector" id="nIzEt!(![^u0Ac{[4KAy">
+                                                                    <value name="vector">
+                                                                      <block type="variables_get" id="2HICCCq~%=(SVj73C|{J">
+                                                                        <field name="VAR" id="dn4ozI$IEJwuHVElp:Tf">vector</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="controls_if" id="!|Fl4AAdI)y}Ziw2JC:c">
+                                                                        <value name="IF0">
+                                                                          <block type="logic_compare" id=".#oPS$0FpWuFbJk(ZKN0">
+                                                                            <field name="OP">GT</field>
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="{LvaUc_7vA|31vC,2T?n">
+                                                                                <field name="VAR" id=",~.OwQk6.Jh,t7$lvib5">conteo</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="math_number" id="-8C+jC1?|0b_=BO(*mjA">
+                                                                                <field name="NUM">10</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <statement name="DO0">
+                                                                          <block type="variables_set" id="$*sUW4D3MiAlZ/quktji">
+                                                                            <field name="VAR" id=",~.OwQk6.Jh,t7$lvib5">conteo</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="math_number" id="p3fgj8w0/4u({=:d$T4F">
+                                                                                <field name="NUM">0</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </statement>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="delayms" id="(8EO]o_(fr(Dq]D?KM0[">
+                                            <value name="delay">
+                                              <block type="math_number" id="!BL.,~QCZ;2]+5ZU1;#8">
+                                                <field name="NUM">50</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
