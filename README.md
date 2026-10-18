@@ -1,7 +1,7 @@
 # Repositorio Computación Física
 Repositorio del libro **Fundamentos de Computación Física y Programación Embebida Usando Dispositivos Móviles: Una Guía Práctica Para el Aula**. Este libro es una apuesta para la enseñanza de computación física usando enteramente dispositivos móviles. En este repositorio se encuentra lo siguiente:
 
-* Algoritmos de computación física para cada uno de los ejemplos del libro compatibles con la aplicación móvil EmDroid y su versión web.
+* Algoritmos de computación física para cada uno de los ejemplos del libro compatibles con la aplicación móvil EmDroid y su versión web. En caso de no cargar un algoritmo, recargue la página web o la versión móvil de EmDroid.
 * Esquemáticos de cada uno de los ejemplos del libro creados en el software Fritzing. La versión de Fritzing para los esquemas es la 0.9.3.
 * Diseños 3D del capitulo 6 (Servos y robótica básica).
 * Diseños CAD en Eagle CadSoft de cada una de las tarjetas de desarrollo de EmDroid (rev A y rev B). La versión de Eagle es la 7.6.0.
