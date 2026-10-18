@@ -1,0 +1,77 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Ssd1306" CircId="Ssd1306-1" mainComp="false" ShowProp="Control_Code" Show_id="true" Show_Val="true" Pos="-112,-220" rotation="0" hflip="1" vflip="1" label="Ssd1306-1" idLabPos="-32,-60" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="false" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="MCU" CircId="m328 TQFP-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-336,-108" rotation="0" hflip="1" vflip="1" label="m328 TQFP-3" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../Imagenes/Capitulo 4/Algoritmos y .hex/Ejemplo11.hex" Auto_Load="true" saveEepr="true" Rst_enabled="true" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Rail" CircId="Rail-12" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-184,-88" rotation="90" hflip="1" vflip="1" label="Rail-12" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Push" CircId="Push-15" mainComp="false" Show_id="true" Show_Val="false" Pos="-428,-68" rotation="90" hflip="1" vflip="1" label="Puls" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Resistor" CircId="Resistor-16" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-428,-148" rotation="90" hflip="1" vflip="1" label="Resistor-16" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Ground" CircId="Ground-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-428,16" rotation="0" hflip="1" vflip="1" label="Ground-17" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-19" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-428,-204" rotation="90" hflip="1" vflip="1" label="Rail-19" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Resistor" CircId="Resistor-23" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-228,-192" rotation="90" hflip="1" vflip="1" label="Resistor-23" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Resistor" CircId="Resistor-26" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-200,-192" rotation="90" hflip="1" vflip="1" label="Resistor-26" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Rail" CircId="Rail-28" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-216,-240" rotation="90" hflip="1" vflip="1" label="Rail-28" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Resistor" CircId="Resistor-61" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-296,-148" rotation="90" hflip="1" vflip="1" label="Resistor-61" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Node" CircId="Node-25" mainComp="false" Pos="-228,-156" />
+
+<item itemtype="Node" CircId="Node-27" mainComp="false" Pos="-200,-148" />
+
+<item itemtype="Node" CircId="Node-29" mainComp="false" Pos="-216,-224" />
+
+<item itemtype="Node" CircId="Node-59" mainComp="false" Pos="-184,-60" />
+
+<item itemtype="Node" CircId="Node-60" mainComp="false" Pos="-428,-112" />
+
+<item itemtype="Node" CircId="Node-62" mainComp="false" Pos="-428,-184" />
+
+<item itemtype="Connector" uid="Connector-37" startpinid="Resistor-23-rPin" endpinid="Node-25-1" pointList="-228,-176,-228,-156" />
+
+<item itemtype="Connector" uid="Connector-38" startpinid="m328 TQFP-3-PORTC5" endpinid="Node-25-0" pointList="-288,-116,-288,-156,-228,-156" />
+
+<item itemtype="Connector" uid="Connector-39" startpinid="Node-25-2" endpinid="Ssd1306-1-PinSck" pointList="-228,-156,-160,-156,-160,-172" />
+
+<item itemtype="Connector" uid="Connector-40" startpinid="Resistor-26-rPin" endpinid="Node-27-1" pointList="-200,-176,-200,-148" />
+
+<item itemtype="Connector" uid="Connector-41" startpinid="m328 TQFP-3-PORTC4" endpinid="Node-27-0" pointList="-280,-116,-280,-148,-200,-148" />
+
+<item itemtype="Connector" uid="Connector-42" startpinid="Node-27-2" endpinid="Ssd1306-1-PinSda" pointList="-200,-148,-152,-148,-152,-172" />
+
+<item itemtype="Connector" uid="Connector-44" startpinid="Resistor-26-lPin" endpinid="Node-29-1" pointList="-200,-208,-200,-224,-216,-224" />
+
+<item itemtype="Connector" uid="Connector-45" startpinid="Resistor-23-lPin" endpinid="Node-29-0" pointList="-228,-208,-228,-224,-216,-224" />
+
+<item itemtype="Connector" uid="Connector-46" startpinid="Node-29-2" endpinid="Rail-28-outnod" pointList="-216,-224,-216,-224" />
+
+<item itemtype="Connector" uid="Connector-124" startpinid="m328 TQFP-3-PORTV1" endpinid="Node-59-1" pointList="-240,-60,-184,-60" />
+
+<item itemtype="Connector" uid="Connector-125" startpinid="Rail-12-outnod" endpinid="Node-59-0" pointList="-184,-72,-184,-60" />
+
+<item itemtype="Connector" uid="Connector-126" startpinid="Node-59-2" endpinid="m328 TQFP-3-PORTV0" pointList="-184,-60,-184,-44,-240,-44" />
+
+<item itemtype="Connector" uid="Connector-130" startpinid="Ground-17-Gnd" endpinid="Push-15-switch0pinN" pointList="-428,0,-428,-52" />
+
+<item itemtype="Connector" uid="Connector-132" startpinid="Node-60-1" endpinid="m328 TQFP-3-PORTB0" pointList="-428,-112,-368,-112,-368,20,-296,20,-296,-12" />
+
+<item itemtype="Connector" uid="Connector-133" startpinid="Resistor-16-rPin" endpinid="Node-60-0" pointList="-428,-132,-428,-112" />
+
+<item itemtype="Connector" uid="Connector-134" startpinid="Node-60-2" endpinid="Push-15-pinP0" pointList="-428,-112,-428,-84" />
+
+<item itemtype="Connector" uid="Connector-135" startpinid="Resistor-61-rPin" endpinid="m328 TQFP-3-PORTC6" pointList="-296,-132,-296,-116" />
+
+<item itemtype="Connector" uid="Connector-136" startpinid="Resistor-61-lPin" endpinid="Node-62-1" pointList="-296,-164,-296,-184,-428,-184" />
+
+<item itemtype="Connector" uid="Connector-137" startpinid="Rail-19-outnod" endpinid="Node-62-0" pointList="-428,-188,-428,-184" />
+
+<item itemtype="Connector" uid="Connector-138" startpinid="Node-62-2" endpinid="Resistor-16-lPin" pointList="-428,-184,-428,-164" />
+
+</circuit>

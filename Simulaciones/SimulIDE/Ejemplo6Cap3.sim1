@@ -1,0 +1,65 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="m328 TQFP-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-224,-136" rotation="0" hflip="1" vflip="1" label="m328 TQFP-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../Imagenes/Capitulo 3/Algoritmos y .hex/Ejemplo6.hex" Auto_Load="false" saveEepr="true" Rst_enabled="true" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Rail" CircId="Rail-5" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-84,-260" rotation="90" hflip="1" vflip="1" label="Rail-5" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Resistor" CircId="Resistor-11" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-184,-220" rotation="90" hflip="1" vflip="1" label="Resistor-11" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Rail" CircId="Rail-12" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-184,-264" rotation="90" hflip="1" vflip="1" label="Rail-12" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Resistor" CircId="Resistor-14" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-84,-44" rotation="90" hflip="1" vflip="1" label="Resistor-14" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Ground" CircId="Ground-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-84,96" rotation="0" hflip="1" vflip="1" label="Ground-17" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Switch" CircId="Switch-38" mainComp="false" Show_id="true" Show_Val="false" Pos="-84,40" rotation="90" hflip="1" vflip="1" label="Sensor" idLabPos="-13.4907,-22.9963" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="BJT" CircId="BJT-47" mainComp="false" Show_id="false" Show_Val="false" Pos="-372,-120" rotation="0" hflip="-1" vflip="1" label="BJT-47" idLabPos="18,0" labelrot="0" valLabPos="-16,20" valLabRot="0" PNP="false" Gain="100" Vcrit="0.670736 V" />
+
+<item itemtype="Resistor" CircId="Resistor-48" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-304,-120" rotation="0" hflip="1" vflip="1" label="Resistor-48" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="1 kΩ" />
+
+<item itemtype="DcMotor" CircId="DcMotor-49" mainComp="false" Show_id="true" Show_Val="false" Pos="-380,-196" rotation="90" hflip="1" vflip="1" label="DcMotor-49" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="120 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Ground" CircId="Ground-50" mainComp="false" Show_id="false" Show_Val="false" Pos="-380,8" rotation="0" hflip="1" vflip="1" label="Ground-50" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-52" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-428,-264" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-52" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="6 V" Out="true" />
+
+<item itemtype="Node" CircId="Node-6" mainComp="false" Pos="-84,-156" />
+
+<item itemtype="Node" CircId="Node-15" mainComp="false" Pos="-84,-80" />
+
+<item itemtype="Node" CircId="Node-57" mainComp="false" Pos="-84,4" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Node-6-1" endpinid="m328 TQFP-2-PORTV1" pointList="-84,-156,-84,-88,-128,-88" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Node-6-2" endpinid="Rail-5-outnod" pointList="-84,-156,-84,-244" />
+
+<item itemtype="Connector" uid="Connector-17" startpinid="Resistor-11-rPin" endpinid="m328 TQFP-2-PORTC6" pointList="-184,-204,-184,-144" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="Rail-12-outnod" endpinid="Resistor-11-lPin" pointList="-184,-248,-184,-236" />
+
+<item itemtype="Connector" uid="Connector-23" startpinid="Node-15-2" endpinid="Node-6-0" pointList="-84,-80,-84,-156" />
+
+<item itemtype="Connector" uid="Connector-22" startpinid="m328 TQFP-2-PORTV0" endpinid="Node-15-0" pointList="-128,-72,-84,-72,-84,-80" />
+
+<item itemtype="Connector" uid="Connector-117" startpinid="Resistor-14-lPin" endpinid="Node-15-1" pointList="-84,-60,-84,-80" />
+
+<item itemtype="Connector" uid="Connector-118" startpinid="Switch-38-switch0pinN" endpinid="Ground-17-Gnd" pointList="-84,56,-84,80" />
+
+<item itemtype="Connector" uid="Connector-121" startpinid="Resistor-48-lPin" endpinid="BJT-47-base" pointList="-320,-120,-356,-120" />
+
+<item itemtype="Connector" uid="Connector-123" startpinid="DcMotor-49-rPin" endpinid="BJT-47-collector" pointList="-380,-156,-380,-136" />
+
+<item itemtype="Connector" uid="Connector-124" startpinid="Ground-50-Gnd" endpinid="BJT-47-emiter" pointList="-380,-8,-380,-104" />
+
+<item itemtype="Connector" uid="Connector-125" startpinid="Fixed Voltage-52-outnod" endpinid="DcMotor-49-lPin" pointList="-412,-264,-380,-264,-380,-236" />
+
+<item itemtype="Connector" uid="Connector-146" startpinid="Node-57-1" endpinid="m328 TQFP-2-PORTB0" pointList="-84,4,-184,4,-184,-40" />
+
+<item itemtype="Connector" uid="Connector-147" startpinid="Switch-38-pinP0" endpinid="Node-57-0" pointList="-84,24,-84,4" />
+
+<item itemtype="Connector" uid="Connector-148" startpinid="Node-57-2" endpinid="Resistor-14-rPin" pointList="-84,4,-84,-28" />
+
+<item itemtype="Connector" uid="Connector-149" startpinid="Resistor-48-rPin" endpinid="m328 TQFP-2-PORTB1" pointList="-288,-120,-288,-28,-176,-28,-176,-40" />
+
+</circuit>
